@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- 1. Change the title and description for this page -->
+<title>Page title | Sandip S. Bhosale</title>
+<meta name="description" content="One sentence about this page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--
+  HOW TO USE THIS TEMPLATE
+  1. Make a COPY of this file and rename it, for example  digital-twin.html  (lowercase, no spaces).
+  2. Edit the title above and the content below.
+  3. Link to it from index.html, for example:  <a href="digital-twin.html">Read the full story</a>
+  4. Upload the folder again. Keep this template file unchanged as your starting point.
+-->
+<div class="site-head">
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html">Sandip Bhosale</a>
+    <div class="hdr-r">
+    <nav class="nav" aria-label="Sections">
+      <a href="index.html#shift">Then and now</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+</div>
+</div>
+
+<main id="top">
+<section>
+  <div class="wrap">
+    <p class="more" style="margin-top:0"><a href="index.html#work">Back to selected work</a></p>
+    <!-- 2. Page title and one-paragraph summary -->
+    <h2>Your page title</h2>
+    <p class="lede">One paragraph that says what this piece of work is, and why it mattered.</p>
+
+    <!-- 3. Optional: two screenshots side by side (put image files in the images folder).
+            Remove this whole block if you have no screenshots. -->
+    <div class="shots">
+      <figure class="shot">
+        <h4>Before</h4>
+        <img src="images/your-before-screenshot.png" alt="Describe the before screen">
+        <figcaption><ol><li>What to notice in the first screen.</li><li>A second thing to notice.</li></ol></figcaption>
+      </figure>
+      <figure class="shot">
+        <h4>After</h4>
+        <img src="images/your-after-screenshot.png" alt="Describe the after screen">
+        <figcaption><ol><li>What changed.</li><li>Why it is better.</li></ol></figcaption>
+      </figure>
+    </div>
+
+    <!-- 4. Text blocks: copy one <div> to add another block -->
+    <div class="case-cols">
+      <div><h4>The problem</h4><p>Describe the problem in two or three sentences.</p></div>
+      <div><h4>What I did</h4><p>Describe your approach and decisions.</p></div>
+      <div><h4>What changed</h4><p>Describe the result for the people who use it.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Designed and built by Sandip S. Bhosale. Pune, India.</div>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>

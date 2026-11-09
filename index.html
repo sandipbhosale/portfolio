@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sandip S. Bhosale, Senior Product Designer</title>
+<meta name="description" content="Senior product designer in Pune. Enterprise SaaS, DevOps and fintech. Designs the product, then builds a working version with Claude and Figma MCP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ============ HEADER: name and menu links (sticky). Menu links point to the section ids below. ============ -->
+<div class="site-head">
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">Sandip Bhosale</a>
+    <div class="hdr-r">
+    <nav class="nav" aria-label="Sections">
+      <a href="#shift">Then and now</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+</div>
+</div>
+
+<!-- ============ PAGE CONTENT STARTS HERE ============ -->
+<main id="top">
+<!-- ============ HERO: big headline, intro paragraph, two buttons, your photo (images/profile.webp) ============ -->
+<section class="hero">
+  <div class="wrap">
+    <h1 aria-label="I design enterprise software, then build a working version to prove it.">
+      <span class="ln"><span>I design enterprise software,</span></span>
+      <span class="ln"><span>then build a working version</span></span>
+      <span class="ln"><span>to prove it.</span></span>
+    </h1>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="lede">I’m Sandip Bhosale, a senior product designer in Pune with more than ten years in UX for enterprise SaaS, DevOps and fintech. I use Claude and Figma MCP to turn requirements into prototypes people can click through, before engineering starts.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See selected work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <div class="frame"><img src="images/profile.webp" width="700" height="700" alt="Portrait of Sandip S. Bhosale, smiling, seated in a black director’s chair"></div>
+      <figcaption>Sandip S. Bhosale, senior product designer, Pune</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ THEN AND NOW: one <details class="vr"> block per stage.
+     Inside each: stage name, the short "now" title, the short "before" title, then the longer text that opens on click.
+     To add a stage, copy a whole <details class="vr" ...> block. Keep style="--i:N" counting up (0, 1, 2 ...). ============ -->
+<section id="shift">
+  <div class="wrap">
+    <h2>From traditional product designer to AI-powered</h2>
+    <p class="lede">The craft is the same. The process around it has changed. Open a stage to see the detail.</p>
+    <div class="vwrap">
+      <div class="vhead" aria-hidden="true"><span></span><span class="h-now">How I work now</span><span class="h-was">How I used to work</span><span></span></div>
+      <div class="vlist" id="vlist">
+      <details class="vr" name="stage" open style="--i:0">
+        <summary><span class="s">Requirements</span><span class="n">AI call summaries</span><span class="w">Scattered notes</span><span class="pm" aria-hidden="true"></span></summary>
+        <div class="vd"><span></span><div class="dn"><p>I record each call and file the Zoom AI summary as a Confluence page in the feature’s folder, linked from the Jira ticket. Claude reads the tickets, epics and every page.</p><ul class="jt"><li>Zoom</li><li>Confluence</li><li>Jira</li><li>Claude</li></ul></div><div class="dw"><p>Notes from meetings, spread across documents and chats.</p></div></div>
+      </details>
+      <details class="vr" name="stage" style="--i:1">
+        <summary><span class="s">Wireframes</span><span class="n">Orchestrator drafts</span><span class="w">Hand-drawn in Figma</span><span class="pm" aria-hidden="true"></span></summary>
+        <div class="vd"><span></span><div class="dn"><p>The orchestrator drafts the wireframe from Jira and Confluence. I only open Figma when Claude misses my layout or I want to compare several layouts. I sketch them, and Claude builds the wireframe from my sketches.</p><ul class="jt"><li>Orchestrator</li><li>Figma, when needed</li></ul></div><div class="dw"><p>Drawn by hand in Figma from my own reading of the requirements.</p></div></div>
+      </details>
+      <details class="vr" name="stage" style="--i:2">
+        <summary><span class="s">Feedback</span><span class="n">Working-version reviews</span><span class="w">Figma comments</span><span class="pm" aria-hidden="true"></span></summary>
+        <div class="vd"><span></span><div class="dn"><p>Stakeholders review a working version. If there’s a Figma file or sketch, they comment there. If not, I record the feedback on the Zoom call, and Claude adjusts the design from the AI summary.</p><ul class="jt"><li>Zoom</li><li>Figma</li></ul></div><div class="dw"><p>Stakeholders left comments on Figma files.</p></div></div>
+      </details>
+      <details class="vr" name="stage" style="--i:3">
+        <summary><span class="s">High fidelity</span><span class="n">After the flow is agreed</span><span class="w">Started early, reworked</span><span class="pm" aria-hidden="true"></span></summary>
+        <div class="vd"><span></span><div class="dn"><p>Starts only after stakeholders confirm the flow, and it’s built from our Storybook components.</p><ul class="jt"><li>Storybook</li><li>Orchestrator</li></ul></div><div class="dw"><p>Started early, then reworked whenever the flow changed.</p></div></div>
+      </details>
+      <details class="vr" name="stage" style="--i:4">
+        <summary><span class="s">Quality check</span><span class="n">Audit agent, then hand testing</span><span class="w">Manual review</span><span class="pm" aria-hidden="true"></span></summary>
+        <div class="vd"><span></span><div class="dn"><p>An audit agent checks that every component is current and comes from Storybook. Then I test every use case and state by hand.</p><ul class="jt"><li>Audit agent</li></ul></div><div class="dw"><p>Manual review of consistency.</p></div></div>
+      </details>
+      <details class="vr" name="stage" style="--i:5">
+        <summary><span class="s">Handoff</span><span class="n">Narrated video and PDF</span><span class="w">Specs to interpret</span><span class="pm" aria-hidden="true"></span></summary>
+        <div class="vd"><span></span><div class="dn"><p>A walkthrough call with the developers, then a narrated MP4 and a PDF from our handoff plugin.</p><ul class="jt"><li>MP4</li><li>PDF</li></ul></div><div class="dw"><p>Specs and documents for developers to interpret.</p></div></div>
+      </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELECTED WORK: every piece is one <details> block (collapsed by default).
+     The first one is the full filter case study. To add a piece, see README.md, section "Add a work item". ============ -->
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="lede">Open a piece to read the story behind it. I’m glad to walk through any of them live.</p>
+    <div class="work-list">
+      <details>
+        <summary><span class="t">Optimising IP discovery in Perforce IPLM</span><span class="m">Perforce Software</span><span class="pm" aria-hidden="true"></span></summary>
+        <article class="case" aria-label="Case study: Optimising IP discovery in Perforce IPLM">
+      <header class="case-head">
+        <p class="meta">Senior Product Designer. Search experience and zero-result prevention.</p>
+        <p class="lede">IPLM helps semiconductor design teams trace IP versions and the dependencies between them. One versioning mistake in a chip design is expensive, so engineers need to find, reuse and trace the right IP block in a catalog that can hold thousands of them.</p>
+        <div class="studied">
+          <span class="studied-l">Studied for inspiration</span>
+          <span class="lg"><img src="images/walmart.png" width="336" height="112" alt="Walmart"></span><span class="lg"><img src="images/ebay.png" width="269" height="112" alt="eBay"></span><span class="lg"><img src="images/amazon.png" width="370" height="112" alt="Amazon"></span>
+        </div>
+        <p class="fine" style="margin-top:10px">Logos belong to their respective owners. I’m not affiliated with or endorsed by these companies.</p>
+      </header>
+      <div class="shots">
+        <figure class="shot">
+          <h4>Before</h4>
+          <svg viewBox="0 0 560 462" role="img" aria-labelledby="t829" xmlns="http://www.w3.org/2000/svg">
+<title id="t829">Before: filter panel without counts</title><desc>A filter panel listing every country, state and city with no counts. India and Bavaria are selected and the results area shows zero results.</desc>
+<rect x="0.5" y="0.5" width="559" height="461" rx="12" fill="#FFFFFF" stroke="#D9DFEB"/>
+<path d="M0.5 38 V12.5 a12 12 0 0 1 12 -12 H547.5 a12 12 0 0 1 12 12 V38 Z" fill="#F1F4FA"/>
+<line x1="0" y1="38" x2="560" y2="38" stroke="#D9DFEB"/>
+<circle cx="18" cy="19" r="4.5" fill="#EC6A5E"/><circle cx="33" cy="19" r="4.5" fill="#F4BF4F"/><circle cx="48" cy="19" r="4.5" fill="#61C554"/>
+<text x="76" y="23.5" font-size="12.5" font-weight="700" fill="#1F2937">IP Catalog</text>
+<rect x="372" y="9" width="170" height="20" rx="10" fill="#FFFFFF" stroke="#D9DFEB"/><text x="386" y="23" font-size="11" fill="#8A94A6">Search IP blocks</text>
+<rect x="0.5" y="38" width="178" height="423.5" fill="#F8FAFD"/><path d="M0.5 427.5 a12 12 0 0 0 12 12 H178 V38.5" fill="none"/>
+<line x1="178" y1="38" x2="178" y2="462" stroke="#D9DFEB"/>
+<text x="16" y="66" font-size="13.5" font-weight="800" fill="#1F2937">Filters</text>
+<text x="162" y="66" font-size="11.5" fill="#3B5BDB" text-anchor="end" font-weight="600">Clear all</text>
+<text x="16" y="92" font-size="12" font-weight="700" fill="#374151">Country</text><rect x="8" y="99" width="162" height="20" rx="6" fill="#E6EBFF"/><rect x="16" y="104" width="13" height="13" rx="3" fill="#3B5BDB" stroke="#3B5BDB"/><path d="M19 110.5 l3 3 l4.5 -6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="37" y="114" font-size="12.5" fill="#1F2937" font-weight="600">India</text><rect x="16" y="126" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="136" font-size="12.5" fill="#1F2937" font-weight="400">United States</text><rect x="16" y="148" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="158" font-size="12.5" fill="#1F2937" font-weight="400">Germany</text><text x="16" y="188" font-size="12" font-weight="700" fill="#374151">State</text><rect x="16" y="200" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="210" font-size="12.5" fill="#1F2937" font-weight="400">Maharashtra</text><rect x="16" y="222" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="232" font-size="12.5" fill="#1F2937" font-weight="400">Karnataka</text><rect x="16" y="244" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="254" font-size="12.5" fill="#1F2937" font-weight="400">California</text><rect x="16" y="266" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="276" font-size="12.5" fill="#1F2937" font-weight="400">Texas</text><rect x="8" y="283" width="162" height="20" rx="6" fill="#E6EBFF"/><rect x="16" y="288" width="13" height="13" rx="3" fill="#3B5BDB" stroke="#3B5BDB"/><path d="M19 294.5 l3 3 l4.5 -6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="37" y="298" font-size="12.5" fill="#1F2937" font-weight="600">Bavaria</text><text x="16" y="328" font-size="12" font-weight="700" fill="#374151">City</text><rect x="16" y="340" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="350" font-size="12.5" fill="#1F2937" font-weight="400">Pune</text><rect x="16" y="362" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="372" font-size="12.5" fill="#1F2937" font-weight="400">Mumbai</text><rect x="16" y="384" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="394" font-size="12.5" fill="#1F2937" font-weight="400">Bengaluru</text><rect x="16" y="406" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="416" font-size="12.5" fill="#1F2937" font-weight="400">San Jose</text><rect x="16" y="428" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="438" font-size="12.5" fill="#1F2937" font-weight="400">Munich</text><text x="198" y="68" font-size="18" font-weight="800" fill="#1F2937">0 results</text><rect x="198" y="80" width="63" height="22" rx="11" fill="#EEF1FA" stroke="#D5DBF0"/><text x="209" y="95" font-size="11.5" fill="#1F2937">India</text><text x="247" y="95" font-size="12" fill="#6B7280">×</text><rect x="269.0" y="80" width="76" height="22" rx="11" fill="#EEF1FA" stroke="#D5DBF0"/><text x="280.0" y="95" font-size="11.5" fill="#1F2937">Bavaria</text><text x="331" y="95" font-size="12" fill="#6B7280">×</text><line x1="198" y1="118" x2="542" y2="118" stroke="#E5E9F2"/><g transform="translate(370 214)"><circle cx="0" cy="0" r="22" fill="none" stroke="#C3CCE0" stroke-width="4"/><line x1="16" y1="16" x2="32" y2="32" stroke="#C3CCE0" stroke-width="4" stroke-linecap="round"/><line x1="-9" y1="-9" x2="9" y2="9" stroke="#C3CCE0" stroke-width="3.5" stroke-linecap="round"/><line x1="9" y1="-9" x2="-9" y2="9" stroke="#C3CCE0" stroke-width="3.5" stroke-linecap="round"/></g><text x="370" y="284" font-size="15" font-weight="700" fill="#1F2937" text-anchor="middle">No IP blocks match</text><text x="370" y="306" font-size="12" fill="#6B7280" text-anchor="middle">Remove filters one at a time to find</text><text x="370" y="322" font-size="12" fill="#6B7280" text-anchor="middle">out which one caused this.</text><circle cx="170" cy="118" r="10" fill="#E4572E"/><text x="170" y="122" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">1</text><circle cx="452" cy="214" r="10" fill="#E4572E"/><text x="452" y="218" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+</svg>
+          <figcaption><ol><li>No counts. You only learn what a filter returns by clicking it.</li><li>Zero results, and nothing says which of the filters caused it.</li></ol></figcaption>
+        </figure>
+        <figure class="shot">
+          <h4>After</h4>
+          <svg viewBox="0 0 560 462" role="img" aria-labelledby="t867" xmlns="http://www.w3.org/2000/svg">
+<title id="t867">After: filter panel with counts and no zero options</title><desc>The filter panel shows a count beside each option. With India and Maharashtra selected, only matching states and cities remain, and nine results are listed.</desc>
+<rect x="0.5" y="0.5" width="559" height="461" rx="12" fill="#FFFFFF" stroke="#D9DFEB"/>
+<path d="M0.5 38 V12.5 a12 12 0 0 1 12 -12 H547.5 a12 12 0 0 1 12 12 V38 Z" fill="#F1F4FA"/>
+<line x1="0" y1="38" x2="560" y2="38" stroke="#D9DFEB"/>
+<circle cx="18" cy="19" r="4.5" fill="#EC6A5E"/><circle cx="33" cy="19" r="4.5" fill="#F4BF4F"/><circle cx="48" cy="19" r="4.5" fill="#61C554"/>
+<text x="76" y="23.5" font-size="12.5" font-weight="700" fill="#1F2937">IP Catalog</text>
+<rect x="372" y="9" width="170" height="20" rx="10" fill="#FFFFFF" stroke="#D9DFEB"/><text x="386" y="23" font-size="11" fill="#8A94A6">Search IP blocks</text>
+<rect x="0.5" y="38" width="178" height="423.5" fill="#F8FAFD"/><path d="M0.5 427.5 a12 12 0 0 0 12 12 H178 V38.5" fill="none"/>
+<line x1="178" y1="38" x2="178" y2="462" stroke="#D9DFEB"/>
+<text x="16" y="66" font-size="13.5" font-weight="800" fill="#1F2937">Filters</text>
+<text x="162" y="66" font-size="11.5" fill="#3B5BDB" text-anchor="end" font-weight="600">Clear all</text>
+<text x="16" y="92" font-size="12" font-weight="700" fill="#374151">Country</text><rect x="8" y="99" width="162" height="20" rx="6" fill="#E6EBFF"/><rect x="16" y="104" width="13" height="13" rx="3" fill="#3B5BDB" stroke="#3B5BDB"/><path d="M19 110.5 l3 3 l4.5 -6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="37" y="114" font-size="12.5" fill="#1F2937" font-weight="600">India</text><text x="162" y="114" font-size="11.5" fill="#6B7280" text-anchor="end">9</text><text x="16" y="144" font-size="12" font-weight="700" fill="#374151">State</text><rect x="8" y="151" width="162" height="20" rx="6" fill="#E6EBFF"/><rect x="16" y="156" width="13" height="13" rx="3" fill="#3B5BDB" stroke="#3B5BDB"/><path d="M19 162.5 l3 3 l4.5 -6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="37" y="166" font-size="12.5" fill="#1F2937" font-weight="600">Maharashtra</text><text x="162" y="166" font-size="11.5" fill="#6B7280" text-anchor="end">9</text><rect x="16" y="178" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="188" font-size="12.5" fill="#1F2937" font-weight="400">Karnataka</text><text x="162" y="188" font-size="11.5" fill="#6B7280" text-anchor="end">5</text><text x="16" y="218" font-size="12" font-weight="700" fill="#374151">City</text><rect x="16" y="230" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="240" font-size="12.5" fill="#1F2937" font-weight="400">Pune</text><text x="162" y="240" font-size="11.5" fill="#6B7280" text-anchor="end">6</text><rect x="16" y="252" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#AEB8CC"/><text x="37" y="262" font-size="12.5" fill="#1F2937" font-weight="400">Mumbai</text><text x="162" y="262" font-size="11.5" fill="#6B7280" text-anchor="end">3</text><text x="198" y="68" font-size="18" font-weight="800" fill="#1F2937">9 results</text><rect x="198" y="80" width="63" height="22" rx="11" fill="#EEF1FA" stroke="#D5DBF0"/><text x="209" y="95" font-size="11.5" fill="#1F2937">India</text><text x="247" y="95" font-size="12" fill="#6B7280">×</text><rect x="269.0" y="80" width="103" height="22" rx="11" fill="#EEF1FA" stroke="#D5DBF0"/><text x="280.0" y="95" font-size="11.5" fill="#1F2937">Maharashtra</text><text x="358" y="95" font-size="12" fill="#6B7280">×</text><line x1="198" y1="118" x2="542" y2="118" stroke="#E5E9F2"/><text x="198" y="138" font-size="10.5" fill="#6B7280" font-weight="600">Name</text><text x="360" y="138" font-size="10.5" fill="#6B7280" font-weight="600">City</text><text x="446" y="138" font-size="10.5" fill="#6B7280" font-weight="600">State</text><line x1="198" y1="174" x2="542" y2="174" stroke="#EDF0F6"/><text x="198" y="164" font-size="12.5" font-weight="600" fill="#1F2937">bandgap-ref</text><text x="360" y="164" font-size="12.5" fill="#374151">Pune</text><text x="446" y="164" font-size="12.5" fill="#374151">Maharashtra</text><line x1="198" y1="204" x2="542" y2="204" stroke="#EDF0F6"/><text x="198" y="194" font-size="12.5" font-weight="600" fill="#1F2937">ldo-reg</text><text x="360" y="194" font-size="12.5" fill="#374151">Pune</text><text x="446" y="194" font-size="12.5" fill="#374151">Maharashtra</text><line x1="198" y1="234" x2="542" y2="234" stroke="#EDF0F6"/><text x="198" y="224" font-size="12.5" font-weight="600" fill="#1F2937">pll-core</text><text x="360" y="224" font-size="12.5" fill="#374151">Pune</text><text x="446" y="224" font-size="12.5" fill="#374151">Maharashtra</text><line x1="198" y1="264" x2="542" y2="264" stroke="#EDF0F6"/><text x="198" y="254" font-size="12.5" font-weight="600" fill="#1F2937">adc-sar</text><text x="360" y="254" font-size="12.5" fill="#374151">Pune</text><text x="446" y="254" font-size="12.5" fill="#374151">Maharashtra</text><line x1="198" y1="294" x2="542" y2="294" stroke="#EDF0F6"/><text x="198" y="284" font-size="12.5" font-weight="600" fill="#1F2937">dac-seg</text><text x="360" y="284" font-size="12.5" fill="#374151">Pune</text><text x="446" y="284" font-size="12.5" fill="#374151">Maharashtra</text><line x1="198" y1="324" x2="542" y2="324" stroke="#EDF0F6"/><text x="198" y="314" font-size="12.5" font-weight="600" fill="#1F2937">temp-sensor</text><text x="360" y="314" font-size="12.5" fill="#374151">Pune</text><text x="446" y="314" font-size="12.5" fill="#374151">Maharashtra</text><line x1="198" y1="354" x2="542" y2="354" stroke="#EDF0F6"/><text x="198" y="344" font-size="12.5" font-weight="600" fill="#1F2937">osc-ring</text><text x="360" y="344" font-size="12.5" fill="#374151">Mumbai</text><text x="446" y="344" font-size="12.5" fill="#374151">Maharashtra</text><text x="198" y="376" font-size="11.5" fill="#6B7280">Showing 7 of 9</text><circle cx="170" cy="92" r="10" fill="#E4572E"/><text x="170" y="96" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">1</text><circle cx="170" cy="222" r="10" fill="#E4572E"/><text x="170" y="226" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+</svg>
+          <figcaption><ol><li>Each option shows how many results it will return.</li><li>Options that would return nothing are hidden, so the list is shorter.</li></ol></figcaption>
+        </figure>
+      </div>
+      <p class="fine">Screens recreated for this portfolio with sample data.</p>
+      <div class="case-cols">
+        <div><h4>The problem</h4><p>The filter panel gave no hint of what a click would return. Engineers applied a few filters, landed on zero results, and unchecked options one by one. With several filters on, nothing showed which choice caused the empty result, so filter, clear and retry became the routine.</p></div>
+        <div><h4>What I noticed</h4><p>Large retail sites such as Walmart, eBay and Amazon handle huge catalogs with the same kind of filter panel. They show how many results a choice will return before you make it. I proposed the same for IPLM, with one more rule: options that would return nothing are hidden.</p></div>
+        <div><h4>How we built it</h4><p>Instead of a custom build, we used the advanced filtering in AG Grid, which already powered the platform’s data table. That kept the engineering effort down.</p></div>
+        <div><h4>What changed</h4><p>Engineers see how many results a choice will return before they click it, and the panel shows fewer options because anything that leads nowhere is gone. They spend less time on trial and error and can be more confident that the version they pick exists.</p></div>
+      </div>
+    </article>
+      </details>
+      <details>
+        <summary><span class="t">A design system across products</span><span class="m">EnKash</span><span class="pm" aria-hidden="true"></span></summary>
+        <dl class="detail">
+          <dt>The problem</dt><dd>Product development was engineer-led and code-first, and the products looked and behaved differently from each other.</dd>
+          <dt>What I did</dt><dd>I helped move the team to a structured, user-centred design lifecycle, and created and maintained a multi-product design system to keep the experience consistent.</dd>
+        </dl>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE: one <div class="job"> per employer; "Earlier roles" is the compact list. ============ -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="tl">
+      <div class="job"><div class="when">Oct 2022 to present<br>Pune, India</div><div><h3>Senior Product Designer</h3><div class="co">Perforce Software</div><p>Lead UX for an enterprise DevOps platform. Built the first functional digital twin of IPLM, run an AI-assisted audit-and-refine cycle, and delivered the Phase 2 IP Catalog enhancements.</p></div></div>
+      <div class="job"><div class="when">Jun 2019 to Sep 2022<br>Pune, India</div><div><h3>Senior Product Designer, Founding Designer</h3><div class="co">Nehat Tech Solutions (EnKash)</div><p>Moved the company from code-first development to a user-centred design lifecycle. Designed B2B card onboarding and a multi-vertical financial platform, and built a multi-product design system.</p></div></div>
+      <div class="job early-job"><div class="when">2009 to 2019</div><div>
+        <h3 class="eh">Earlier roles</h3>
+        <ul class="early">
+          <li><b>Larsen &amp; Toubro Infotech (LTI)</b><span>Project Lead, UI/UX</span><span class="d">Jun 2018 to May 2019</span></li>
+          <li><b>Wishpoint (Scandid)</b><span>UI/UX Designer</span><span class="d">Jan 2017 to Jun 2018</span></li>
+          <li><b>Techvisions IT Solutions</b><span>UX/UI Designer</span><span class="d">Jan 2016 to Dec 2016</span></li>
+          <li><b>Skadas Creative</b><span>Creative Head</span><span class="d">Oct 2014 to Dec 2015</span></li>
+          <li><b>Penatraite</b><span>Senior Graphic Designer</span><span class="d">Feb 2014 to Oct 2014</span></li>
+          <li><b>Titanium Interactive</b><span>Graphic Designer</span><span class="d">Nov 2011 to Jul 2012</span></li>
+          <li><b>Animaks</b><span>Graphic Designer</span><span class="d">Oct 2009 to Oct 2011</span></li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT I WORK WITH: four short skill groups ============ -->
+<section id="toolkit">
+  <div class="wrap">
+    <h2>What I work with</h2>
+    <div class="tools">
+      <div><h3>Product design</h3><p>Product design strategy, UX strategy, interaction design, information architecture, user research, user journeys, wireframing and high-fidelity prototyping.</p></div>
+      <div><h3>AI-assisted development</h3><p>Claude, Figma MCP, MCPs and connectors, agents, skills, AI workflow orchestration, functional prototyping and digital twins.</p></div>
+      <div><h3>Design systems and delivery</h3><p>Design systems, governance, DesignOps, design audits, specifications and developer handoff.</p></div>
+      <div><h3>Tools and domains</h3><p>Figma, Confluence, Jira, enterprise SaaS, DevOps platforms, fintech, B2B platforms and role-based access control.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT: email, phone, LinkedIn. Email appears twice here and once in script.js. ============ -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Get in touch</h2>
+      <p>Whether it’s a role, a project, a collaboration, or just a conversation about design and AI, I’d like to hear from you. Email is the quickest way to reach me.</p>
+      <a class="mail" id="mail" href="mailto:bhosale.sandip2@gmail.com">bhosale.sandip2@gmail.com</a>
+      <div><button type="button" class="copy" id="copy">Copy email address</button> <span id="copied" aria-live="polite"></span></div>
+      <div class="row2">
+        <a href="tel:+918956503553">+91 8956503553</a>
+        <a href="https://www.linkedin.com/in/sandip-bhosale/">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">Designed and built by Sandip S. Bhosale with Claude. Pune, India.</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
