@@ -143,7 +143,7 @@ summary:hover .t { color: var(--accent-text); }
 .vwrap { margin-top: 36px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: clamp(16px, 3vw, 28px); --c1: 150px; --g: 22px; }
 .vhead, .vr summary, .vd { display: grid; grid-template-columns: var(--c1) minmax(0,1.25fr) minmax(0,1fr) 24px; column-gap: var(--g); align-items: center; }
 .vhead { padding-bottom: 12px; font-family: var(--display); font-weight: 700; font-size: 1.05rem; border-bottom: 1px solid var(--line); }
-.vhead .h-now { color: var(--accent-text); padding-left: 28px; }
+.vhead .h-now { color: var(--muted); padding-left: 28px; }
 .vhead .h-was { color: var(--muted); padding-left: 0; }
 .vr { position: relative; border-bottom: 1px solid var(--line); }
 .vr:last-child { border-bottom: 0; }
