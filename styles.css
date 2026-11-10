@@ -403,3 +403,10 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 
 /* Design-system case-study hero illustration */
 .ds-hero-thumb svg { display:block; width:100%; height:100%; }
+
+
+/* Google brand colours for the punctuation in the hero headline. */
+h1 .hero-dot { color: inherit; }
+h1 .hero-dot.dot-green { color: #34A853; }
+h1 .hero-dot.dot-yellow { color: #FBBC05; }
+h1 .hero-dot.dot-red { color: #EA4335; }
