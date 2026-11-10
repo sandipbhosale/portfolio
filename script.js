@@ -231,3 +231,32 @@
   window.addEventListener("hashchange", requestUpdate);
   updateActive();
 })();
+
+
+/* ===== 5. RESPONSIVE MOBILE NAVIGATION ===== */
+(function () {
+  var btn = document.getElementById("menuBtn");
+  var nav = document.getElementById("siteNav");
+  var hdr = document.querySelector(".hdr-r");
+  if (!btn || !nav || !hdr) return;
+  function closeMenu() {
+    hdr.classList.remove("menu-open");
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Open navigation menu");
+  }
+  btn.addEventListener("click", function () {
+    var open = btn.getAttribute("aria-expanded") !== "true";
+    hdr.classList.toggle("menu-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+  });
+  nav.addEventListener("click", function (event) {
+    if (event.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") { closeMenu(); btn.focus(); }
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 760) closeMenu();
+  });
+})();
