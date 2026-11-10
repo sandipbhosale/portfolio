@@ -155,8 +155,10 @@
   }
 
   document.addEventListener("mousemove", function (e) {
-    mx = e.clientX; my = e.clientY; lastT = e.target; inside = true;
-    if (!shown) { shown = true; rx = mx; ry = my; root.classList.add("cursor-on"); dot.style.opacity = 1; ring.style.opacity = 0.4; }
+    mx = e.clientX; my = e.clientY; rx = mx; ry = my; lastT = e.target; inside = true;
+    /* Move the inversion layer on the same pointer event; do not ease behind the pointer. */
+    ring.style.transform = "translate3d(" + mx + "px," + my + "px,0) scale(" + rs.toFixed(3) + ")";
+    if (!shown) { shown = true; root.classList.add("cursor-on"); dot.style.opacity = 1; ring.style.opacity = 0.4; }
     state(lastT); pull(); aim();
   }, { passive: true });
   document.addEventListener("mousedown", function () { rsT = 0.8; });
@@ -168,9 +170,9 @@
   root.addEventListener("mouseenter", function () { if (shown) { inside = true; dot.style.opacity = 1; ring.style.opacity = 1; } });
 
   (function loop() {
-    rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18; rs += (rsT - rs) * 0.25;
+    rx = mx; ry = my; rs += (rsT - rs) * 0.25;
     dot.style.transform = "translate3d(" + mx + "px," + my + "px,0)";
-    ring.style.transform = "translate3d(" + rx.toFixed(1) + "px," + ry.toFixed(1) + "px,0) scale(" + rs.toFixed(3) + ")";
+    ring.style.transform = "translate3d(" + mx + "px," + my + "px,0) scale(" + rs.toFixed(3) + ")";
     if (pic) {
       cu.x += (tg.x - cu.x) * 0.08; cu.y += (tg.y - cu.y) * 0.08;
       pic.style.transform = "perspective(900px) rotateY(" + (cu.x * 5).toFixed(2) + "deg) rotateX(" + (-cu.y * 4).toFixed(2) + "deg) translate3d(" + (cu.x * 8).toFixed(1) + "px," + (cu.y * 6).toFixed(1) + "px,0) scale(1.06)";
