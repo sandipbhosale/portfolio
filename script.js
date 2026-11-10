@@ -281,3 +281,54 @@
     if (window.innerWidth > 760) closeMenu();
   });
 })();
+
+
+/* ===== 6. CASE-STUDY READING PROGRESS ===== */
+(function () {
+  var article = document.querySelector(".case");
+  if (!article) return;
+  var bar = document.createElement("div");
+  bar.className = "case-reading-progress";
+  bar.setAttribute("role", "progressbar");
+  bar.setAttribute("aria-label", "Case study reading progress");
+  bar.setAttribute("aria-valuemin", "0");
+  bar.setAttribute("aria-valuemax", "100");
+  var fill = document.createElement("span");
+  bar.appendChild(fill);
+  document.body.appendChild(bar);
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var rect = article.getBoundingClientRect();
+    var total = article.offsetHeight - window.innerHeight;
+    var progress = total <= 0 ? 1 : Math.max(0, Math.min(1, -rect.top / total));
+    fill.style.transform = "scaleX(" + progress + ")";
+    bar.setAttribute("aria-valuenow", String(Math.round(progress * 100)));
+  }
+  function requestUpdate() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  update();
+})();
+
+/* ===== 7. CAREER ROADMAP REVEAL ===== */
+(function () {
+  var milestones = document.querySelectorAll(".career-milestone");
+  if (!milestones.length) return;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)) {
+    milestones.forEach(function (item) { item.classList.add("is-visible"); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  milestones.forEach(function (item) { observer.observe(item); });
+})();
