@@ -272,7 +272,7 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 .cur-dot, .cur-ring { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 9999; opacity: 0; will-change: transform; }
 .cur-ring { mix-blend-mode: difference; }
 .cur-dot { width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: #FFFFFF; transition: opacity .2s; }
-.cur-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; border: 0; background: #FFFFFF; transition: opacity .2s, width .28s cubic-bezier(.2,.8,.2,1), height .28s cubic-bezier(.2,.8,.2,1), margin .28s cubic-bezier(.2,.8,.2,1), background .2s; }
+.cur-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; border: 0; background: #FFFFFF; opacity: .4; transition: opacity .2s, width .28s cubic-bezier(.2,.8,.2,1), height .28s cubic-bezier(.2,.8,.2,1), margin .28s cubic-bezier(.2,.8,.2,1), background .2s; }
 .cur-ring.link { width: 62px; height: 62px; margin: -31px 0 0 -31px; background: #FFFFFF; }
 .mag { transition: transform .22s cubic-bezier(.2,.8,.2,1); }
 .portrait .frame img { will-change: transform; }
@@ -396,3 +396,6 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 .jt-item:hover::after,.jt-item:focus-visible::after { opacity:1; visibility:visible; transform:translate(-50%,0); }
 .sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 @media (prefers-reduced-motion:reduce) { .jt-item { transition:none; } .jt-item::after { transition:none; } }
+
+/* Keep the cursor visibly white over primary-colour surfaces instead of inverting to orange. */
+.cur-ring.primary-hover { mix-blend-mode: normal; }
