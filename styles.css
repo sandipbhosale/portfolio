@@ -287,3 +287,16 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 .case-hero-thumb .thumb-window{width:82%;height:70%}
 .case-hero-thumb .thumb-index{display:none}
 @media(max-width:760px){.case-intro-grid{grid-template-columns:1fr}.case-hero-thumb{min-height:190px;max-width:560px}}
+
+
+/* Active section indicator in the sticky navigation */
+.nav a.active,
+.nav a[aria-current="location"] {
+  color: var(--accent-text);
+  border-bottom-color: var(--blue);
+  font-weight: 700;
+}
+.nav a.active:hover,
+.nav a[aria-current="location"]:hover {
+  border-bottom-color: var(--blue);
+}
