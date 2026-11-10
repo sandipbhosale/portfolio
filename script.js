@@ -77,11 +77,14 @@
   var mx = -1000, my = -1000, rx = -100, ry = -100, rs = 1, rsT = 1, shown = false, lastT = null, inside = false;
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
 
+  var activePrimary = null;
   function state(t) {
     var hit = t && t.closest ? t.closest("a, button, summary") : null;
     var primary = t && t.closest ? t.closest(".btn.primary, .contact") : null;
     ring.classList.toggle("link", !!hit);
-    ring.classList.toggle("primary-hover", !!primary);
+    if (activePrimary && activePrimary !== primary) activePrimary.classList.remove("cursor-primary-hover");
+    if (primary) primary.classList.add("cursor-primary-hover");
+    activePrimary = primary;
   }
 
   /* magnetic buttons and menu links */
@@ -159,7 +162,7 @@
   document.addEventListener("mousedown", function () { rsT = 0.8; });
   document.addEventListener("mouseup", function () { rsT = 1; });
   root.addEventListener("mouseleave", function () {
-    inside = false; dot.style.opacity = 0; ring.style.opacity = 0; tg.x = 0; tg.y = 0;
+    inside = false; dot.style.opacity = 0; ring.style.opacity = 0; tg.x = 0; tg.y = 0; if (activePrimary) { activePrimary.classList.remove("cursor-primary-hover"); activePrimary = null; }
     mags.forEach(function (m) { m.style.transform = ""; m._on = false; m._tx = 0; m._ty = 0; });
   });
   root.addEventListener("mouseenter", function () { if (shown) { inside = true; dot.style.opacity = 1; ring.style.opacity = 1; } });
