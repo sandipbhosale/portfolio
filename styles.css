@@ -401,3 +401,6 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 /* Primary CTA buttons switch to a high-contrast inverted state under the cursor. */
 .btn.primary.cursor-primary-hover { background: #000000; border-color: #000000; color: #FFFFFF; }
 .btn.primary.cursor-primary-hover * { color: #FFFFFF; }
+
+/* Design-system case-study hero illustration */
+.ds-hero-thumb svg { display:block; width:100%; height:100%; }
