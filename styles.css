@@ -174,13 +174,17 @@ summary:hover .t { color: var(--accent-text); }
   .vr summary, .vd { grid-template-columns: minmax(0,1fr) 24px; row-gap: 6px; }
   .vr .s { grid-column: 1; grid-row: 1; padding-left: 28px; }
   .vr summary .pm { grid-column: 2; grid-row: 1; }
+  .vr .s { color: var(--accent-text); }
   .vr .n { grid-column: 1 / -1; grid-row: 2; }
-  .vr .n::before { margin-top: -10.5px; }
-  .vr .w { grid-column: 1 / -1; grid-row: 3; margin-left: 28px; }
-  .vr .w::before { content: "Before: "; font-weight: 700; }
+  .vr .n::before { content: "Now: "; margin-top: 0; color: var(--muted); font-size: .88em; }
+  .vr .w { display: none; }
   .vd > span:first-child { display: none; }
   .vd .dn, .vd .dw { grid-column: 1 / -1; padding-left: 28px; padding-right: 0; }
-  .vd .dw p::before { content: "Before: "; font-weight: 700; }
+  .vd .dn { display: flex; flex-direction: column; }
+  .vd .dw { margin-top: 12px; }
+  .vd .dw .was-title { color: var(--ink); font-weight: 700; margin: 0 0 4px; }
+  .vd .dw .was-title::before { content: "Then: "; color: var(--muted); }
+  .vd .dw p:not(.was-title) { color: var(--muted); }
 }
 
 /* experience */
