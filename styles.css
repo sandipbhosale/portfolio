@@ -174,13 +174,18 @@ summary:hover .t { color: var(--accent-text); }
   .vr summary, .vd { grid-template-columns: minmax(0,1fr) 24px; row-gap: 6px; }
   .vr .s { grid-column: 1; grid-row: 1; padding-left: 28px; }
   .vr summary .pm { grid-column: 2; grid-row: 1; }
-  .vr .s { color: var(--accent-text); }
-  .vr .n { grid-column: 1 / -1; grid-row: 2; }
-  .vr .n::before { content: "Now: "; margin-top: 0; color: var(--muted); font-size: .88em; }
+  .vr .s { position: relative; color: var(--ink); }
+  .vr .s::before { content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 14px; margin-top: -10px; border-radius: 50%; background: var(--blue); border: 3px solid var(--surface); box-sizing: content-box; }
+  .vr[open] .s { color: var(--accent-text); }
+  .vr .n { display: none; }
   .vr .w { display: none; }
   .vd > span:first-child { display: none; }
   .vd .dn, .vd .dw { grid-column: 1 / -1; padding-left: 28px; padding-right: 0; }
   .vd .dn { display: flex; flex-direction: column; }
+  .vd .dn .now-title { order: 0; color: var(--ink); font-family: var(--display); font-weight: 700; font-size: 1.05rem; line-height: 1.35; margin: 0 0 8px; }
+  .vd .dn .now-title::before { content: "Now: "; color: var(--muted); font-weight: 600; }
+  .vd .dn > p:not(.now-title) { order: 1; }
+  .vd .dn .jt { order: 2; }
   .vd .dw { margin-top: 12px; }
   .vd .dw .was-title { color: var(--ink); font-weight: 700; margin: 0 0 4px; }
   .vd .dw .was-title::before { content: "Then: "; color: var(--muted); }
