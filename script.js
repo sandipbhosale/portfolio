@@ -79,7 +79,9 @@
 
   function state(t) {
     var hit = t && t.closest ? t.closest("a, button, summary") : null;
+    var primary = t && t.closest ? t.closest(".btn.primary, .contact") : null;
     ring.classList.toggle("link", !!hit);
+    ring.classList.toggle("primary-hover", !!primary);
   }
 
   /* magnetic buttons and menu links */
@@ -151,7 +153,7 @@
 
   document.addEventListener("mousemove", function (e) {
     mx = e.clientX; my = e.clientY; lastT = e.target; inside = true;
-    if (!shown) { shown = true; rx = mx; ry = my; root.classList.add("cursor-on"); dot.style.opacity = 1; ring.style.opacity = 1; }
+    if (!shown) { shown = true; rx = mx; ry = my; root.classList.add("cursor-on"); dot.style.opacity = 1; ring.style.opacity = 0.4; }
     state(lastT); pull(); aim();
   }, { passive: true });
   document.addEventListener("mousedown", function () { rsT = 0.8; });
