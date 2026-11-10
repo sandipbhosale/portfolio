@@ -106,7 +106,7 @@ h1 .ln:nth-child(2) > span { animation-delay: 0.12s; }
 h1 .ln:nth-child(3) > span { animation-delay: 0.24s; }
 @keyframes rise { to { transform: translateY(0); } }
 .hero .lede { margin-top: 0; font-size: 1.125rem; }
-.hero-grid { margin-top: clamp(32px, 5vw, 56px); }
+.hero-grid { margin-top: 0; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .btn { font-family: var(--display); font-weight: 700; font-size: 1rem; padding: 13px 22px; border-radius: 10px; text-decoration: none; border: 2px solid var(--blue); display: inline-block; cursor: pointer; }
 .btn.primary { background: var(--primary); color: var(--on-blue); }
