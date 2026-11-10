@@ -314,10 +314,10 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 
 /* Case-study intro: keep thumbnail artwork and proportions identical to the homepage card.
    Reuse .project-thumb and its default .thumb-window dimensions; do not resize the inner artwork. */
-.case-intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:clamp(24px,4vw,48px);align-items:center;margin:10px 0 28px}
+.case-intro-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,32px);align-items:center;margin:10px 0 28px}
 .case-intro-grid .lede{margin:0;max-width:62ch}
 .case-hero-thumb{width:100%;pointer-events:none}
-@media(max-width:760px){.case-intro-grid{grid-template-columns:1fr}}
+@media(max-width:720px){.case-intro-grid{grid-template-columns:1fr}}
 
 
 /* Active section indicator in the sticky navigation */
