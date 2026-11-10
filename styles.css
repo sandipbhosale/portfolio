@@ -145,7 +145,8 @@ summary:hover .t { color: var(--accent-text); }
 .vhead { padding-bottom: 12px; font-family: var(--display); font-weight: 700; font-size: 1.05rem; border-bottom: 1px solid var(--line); }
 .vhead .h-now { color: var(--muted); padding-left: 28px; }
 .vhead .h-was { color: var(--muted); padding-left: 0; }
-.vr { position: relative; border-bottom: 1px solid var(--line); }
+.vr { position: relative; border-bottom: 1px solid var(--line); transition: background-color .18s ease; }
+.vr:hover, .vr:focus-within { background: var(--blue-soft); }
 .vr:last-child { border-bottom: 0; }
 .vr::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(var(--c1) + var(--g) + 6px); width: 3px; background: var(--blue); transform-origin: top; }
 .vr summary { padding: 18px 0; cursor: pointer; }
