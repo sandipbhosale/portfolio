@@ -401,3 +401,10 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 /* Primary CTA buttons switch to a high-contrast inverted state under the cursor. */
 .btn.primary.cursor-primary-hover { background: #000000; border-color: #000000; color: #FFFFFF; }
 .btn.primary.cursor-primary-hover * { color: #FFFFFF; }
+
+
+/* Google brand colours for the punctuation in the hero headline. */
+h1 .hero-dot { color: inherit; }
+h1 .hero-dot.dot-green { color: #34A853; }
+h1 .hero-dot.dot-yellow { color: #FBBC05; }
+h1 .hero-dot.dot-red { color: #EA4335; }
