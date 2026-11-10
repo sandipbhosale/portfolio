@@ -25,20 +25,24 @@
   }
 
   /* contact */
-  var copyBtn = document.getElementById("copy"), copied = document.getElementById("copied");
+  var copyBtn = document.getElementById("copy");
   var copyLabel = document.getElementById("copyLabel"), copyResetTimer;
   if (copyBtn) copyBtn.addEventListener("click", function () {
     var mail = "bhosale.sandip2@gmail.com";
     function ok() {
       if (copyLabel) copyLabel.textContent = "Copied";
-      if (copied) copied.textContent = "Email address copied to clipboard.";
       clearTimeout(copyResetTimer);
       copyResetTimer = setTimeout(function () {
         if (copyLabel) copyLabel.textContent = "Click to copy my email address";
-        if (copied) copied.textContent = "";
       }, 2200);
     }
-    function fail() { if (copied) copied.textContent = "Couldn’t copy. Select the address above instead."; }
+    function fail() {
+      if (copyLabel) copyLabel.textContent = "Couldn’t copy";
+      clearTimeout(copyResetTimer);
+      copyResetTimer = setTimeout(function () {
+        if (copyLabel) copyLabel.textContent = "Click to copy my email address";
+      }, 2200);
+    }
 
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(mail).then(ok, fail); }
