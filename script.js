@@ -26,10 +26,20 @@
 
   /* contact */
   var copyBtn = document.getElementById("copy"), copied = document.getElementById("copied");
+  var copyLabel = document.getElementById("copyLabel"), copyResetTimer;
   if (copyBtn) copyBtn.addEventListener("click", function () {
     var mail = "bhosale.sandip2@gmail.com";
-    function ok() { copied.textContent = "Copied."; setTimeout(function () { copied.textContent = ""; }, 2200); }
-    function fail() { copied.textContent = "Couldn’t copy. Select the address above instead."; }
+    function ok() {
+      if (copyLabel) copyLabel.textContent = "Copied";
+      if (copied) copied.textContent = "Email address copied to clipboard.";
+      clearTimeout(copyResetTimer);
+      copyResetTimer = setTimeout(function () {
+        if (copyLabel) copyLabel.textContent = "Click to copy my email address";
+        if (copied) copied.textContent = "";
+      }, 2200);
+    }
+    function fail() { if (copied) copied.textContent = "Couldn’t copy. Select the address above instead."; }
+
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(mail).then(ok, fail); }
       else { fail(); }
@@ -80,7 +90,7 @@
   var activePrimary = null;
   function state(t) {
     var hit = t && t.closest ? t.closest("a, button, summary") : null;
-    var primary = t && t.closest ? t.closest(".btn.primary, .contact") : null;
+    var primary = t && t.closest ? t.closest(".btn.primary") : null;
     ring.classList.toggle("link", !!hit);
     if (activePrimary && activePrimary !== primary) activePrimary.classList.remove("cursor-primary-hover");
     if (primary) primary.classList.add("cursor-primary-hover");
