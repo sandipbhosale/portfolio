@@ -389,6 +389,7 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 .jt { list-style:none; display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin:16px 0 0; padding:0; }
 .jt li.jt-item { position:relative; display:grid; place-items:center; flex:0 0 34px; width:34px; height:34px; margin:0; padding:0; list-style:none; border:0; border-radius:0; background:transparent; color:inherit; font:inherit; box-shadow:none; cursor:help; transition:transform .2s ease; }
 .jt-item img { display:block; width:30px; height:30px; object-fit:contain; }
+@media (min-width:761px) { .jt-item img { width:24px; height:24px; } }
 .jt li.jt-item:hover,.jt li.jt-item:focus-visible { transform:translateY(-3px) scale(1.08); background:transparent; border:0; box-shadow:none; }
 .jt-item::after { content:attr(data-tooltip); position:absolute; left:50%; bottom:calc(100% + 9px); z-index:5; padding:5px 9px; border-radius:6px; background:var(--ink); color:var(--surface); font:500 .75rem/1.2 "Roboto",Arial,sans-serif; white-space:nowrap; opacity:0; visibility:hidden; transform:translate(-50%,4px); transition:opacity .16s ease,transform .16s ease,visibility .16s; pointer-events:none; box-shadow:0 4px 12px rgba(0,0,0,.16); }
 .jt-item:hover::after,.jt-item:focus-visible::after { opacity:1; visibility:visible; transform:translate(-50%,0); }
