@@ -110,6 +110,8 @@ h1 .ln:nth-child(3) > span { animation-delay: 0.24s; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .btn { font-family: var(--display); font-weight: 700; font-size: 1rem; padding: 13px 22px; border-radius: 10px; text-decoration: none; border: 2px solid var(--blue); display: inline-block; cursor: pointer; }
 .btn.primary { background: var(--primary); color: var(--on-blue); }
+:root[data-theme="dark"] .btn.primary { border-color: var(--primary); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.primary { border-color: var(--primary); } }
 .btn.ghost { background: transparent; color: var(--blue); }
 .btn:hover { filter: brightness(1.08); }
 
