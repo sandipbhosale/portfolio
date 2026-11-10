@@ -481,7 +481,7 @@ h1 .hero-dot { color: inherit; }
 .career-roadmap--snake .career-milestone:nth-child(5) { left:44%; top:400px; text-align:center; }
 .career-roadmap--snake .career-node { position:absolute; width:13px; height:13px; border:2px solid var(--muted); border-radius:50%; background:var(--bg); box-shadow:0 0 0 5px color-mix(in srgb,var(--bg) 80%,transparent),0 0 12px color-mix(in srgb,var(--muted) 45%,transparent); transition:transform .2s,border-color .2s; }
 .career-roadmap--snake .career-milestone:nth-child(1) .career-node { left:0; top:96px; }
-.career-roadmap--snake .career-milestone:nth-child(2) .career-node { left:45%; top:-72px; }
+.career-roadmap--snake .career-milestone:nth-child(2) .career-node { left:20%; top:-72px; }
 .career-roadmap--snake .career-milestone:nth-child(3) .career-node { left:48%; top:122px; }
 .career-roadmap--snake .career-milestone:nth-child(4) .career-node { right:18%; top:65px; }
 .career-roadmap--snake .career-milestone:nth-child(5) .career-node { left:48%; top:76px; border-color:var(--blue); background:var(--blue); box-shadow:0 0 0 6px color-mix(in srgb,var(--blue) 16%,transparent),0 0 14px color-mix(in srgb,var(--blue) 35%,transparent); }
