@@ -408,3 +408,59 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 /* Google brand colours for the punctuation in the hero headline. */
 /* Keep hero punctuation the same colour as its headline text. */
 h1 .hero-dot { color: inherit; }
+
+
+/* Career roadmap: a winding route connects the milestones across the design journey. */
+.career-section .lede { max-width:66ch; }
+.career-roadmap { position:relative; margin:58px 0 0; min-height:330px; }
+.career-route { position:absolute; inset:0 0 auto; width:100%; height:180px; overflow:visible; }
+.career-route path { fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.route-base { stroke:var(--muted); stroke-width:1.7; opacity:.72; }
+.route-accent { stroke:var(--blue); stroke-width:2.2; }
+.career-milestones { position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:clamp(14px,2vw,28px); }
+.career-milestone { position:relative; min-width:0; padding-top:194px; opacity:0; transform:translateY(14px); transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1); }
+.career-milestone.is-visible { opacity:1; transform:translateY(0); }
+.career-milestone:nth-child(2),.career-milestone:nth-child(4) { padding-top:212px; }
+.career-node { position:absolute; top:82px; left:0; width:16px; height:16px; border:2px solid var(--muted); border-radius:50%; background:var(--bg); box-shadow:0 0 0 5px color-mix(in srgb,var(--bg) 78%,transparent); transition:background .2s,border-color .2s,transform .2s; }
+.career-milestone:nth-child(2) .career-node { top:20px; left:36%; }
+.career-milestone:nth-child(3) .career-node { top:142px; left:30%; }
+.career-milestone:nth-child(4) .career-node { top:42px; left:34%; }
+.career-milestone:nth-child(5) .career-node { top:20px; left:34%; border-color:var(--blue); background:var(--blue); box-shadow:0 0 0 6px color-mix(in srgb,var(--blue) 16%,transparent); }
+.career-milestone:hover .career-node,.career-milestone:focus-within .career-node { transform:scale(1.2); border-color:var(--blue); }
+.career-year { display:block; margin-bottom:10px; color:var(--accent-text); font:700 .9rem var(--display); letter-spacing:.04em; }
+.career-milestone h3 { margin:0 0 7px; font-size:clamp(1.08rem,1.55vw,1.35rem); line-height:1.15; }
+.career-company { color:var(--ink)!important; font-weight:600; margin:0 0 8px!important; font-size:.9rem; }
+.career-milestone p:last-child { color:var(--muted); font-size:.94rem; line-height:1.55; margin:0; }
+.career-footnote { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-top:22px; margin-top:30px; border-top:1px solid var(--line); color:var(--muted); font:500 .9rem var(--display); }
+.contact h2 { max-width:18ch; }
+.contact .contact-manifesto { max-width:38ch; font:500 clamp(1.15rem,2.3vw,1.65rem)/1.35 var(--display); opacity:1; }
+.contact .contact-manifesto + p { margin-top:12px; }
+.project-card { transition:transform .3s cubic-bezier(.2,.8,.2,1); }
+.project-card:focus-visible { outline:3px solid var(--blue); outline-offset:5px; border-radius:12px; }
+.project-card:hover { transform:translateY(-4px); }
+.project-thumb { transition:box-shadow .3s ease; }
+.project-card:hover .project-thumb,.project-card:focus-visible .project-thumb { box-shadow:0 18px 42px rgba(0,0,0,.13); }
+.case-reading-progress { position:fixed; z-index:120; top:0; left:0; width:100%; height:3px; pointer-events:none; background:transparent; }
+.case-reading-progress span { display:block; width:100%; height:100%; background:var(--blue); transform:scaleX(0); transform-origin:left center; will-change:transform; }
+@media (max-width:900px) {
+  .career-roadmap { min-height:390px; }
+  .career-milestones { grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+  .career-milestone { padding-top:194px; }
+  .career-milestone:nth-child(2),.career-milestone:nth-child(4) { padding-top:212px; }
+  .career-milestone h3 { font-size:1.05rem; }
+  .career-milestone p:last-child { font-size:.86rem; }
+}
+@media (max-width:680px) {
+  .career-roadmap { margin:34px 0 0; min-height:0; padding-left:30px; }
+  .career-route { top:0; left:0; width:34px; height:100%; }
+  .career-route path { display:none; }
+  .career-route::after { content:""; }
+  .career-milestones { display:grid; grid-template-columns:1fr; gap:0; }
+  .career-milestone,.career-milestone:nth-child(2),.career-milestone:nth-child(3),.career-milestone:nth-child(4),.career-milestone:nth-child(5) { padding:0 0 30px 18px; min-height:128px; }
+  .career-node,.career-milestone:nth-child(2) .career-node,.career-milestone:nth-child(3) .career-node,.career-milestone:nth-child(4) .career-node,.career-milestone:nth-child(5) .career-node { top:3px; left:-30px; }
+  .career-milestone:not(:last-child)::before { content:""; position:absolute; left:-23px; top:18px; bottom:0; width:1px; background:var(--line); }
+  .career-footnote { display:grid; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .career-milestone,.career-node,.project-card,.project-thumb { transition:none!important; transform:none!important; }
+}
