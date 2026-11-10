@@ -406,7 +406,5 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 
 
 /* Google brand colours for the punctuation in the hero headline. */
+/* Keep hero punctuation the same colour as its headline text. */
 h1 .hero-dot { color: inherit; }
-h1 .hero-dot.dot-green { color: #34A853; }
-h1 .hero-dot.dot-yellow { color: #FBBC05; }
-h1 .hero-dot.dot-red { color: #EA4335; }
