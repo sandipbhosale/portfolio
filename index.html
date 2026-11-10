@@ -138,41 +138,48 @@
   <div class="wrap">
     <h2>The road so far</h2>
     <p class="lede">From visual design to shaping complex products—and now bringing design closer to working software.</p>
-    <div class="career-roadmap" aria-label="Career journey from 2009 to 2022">
-      <svg class="career-route" viewBox="0 0 1200 180" preserveAspectRatio="none" aria-hidden="true">
-        <path class="route-base" d="M24 90 C110 90 120 90 170 90 C220 90 220 20 290 28 C360 36 330 152 420 150 C500 148 510 50 590 50 C660 50 650 145 740 145 C820 145 830 28 910 28 C990 28 970 90 1176 90"/>
-        <path class="route-accent" d="M910 28 C990 28 970 90 1176 90"/>
+    <div class="career-roadmap career-roadmap--snake" aria-label="Career journey from 2009 to 2026">
+      <svg class="career-route" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="career-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <path class="route-glow" d="M42 112 C250 112 430 112 650 145 C850 175 1080 200 1100 290 C1125 390 930 445 760 480 C580 515 420 520 245 520"/>
+        <path class="route-base" d="M42 112 C250 112 430 112 650 145 C850 175 1080 200 1100 290 C1125 390 930 445 760 480 C580 515 420 520 245 520"/>
+        <path class="route-accent" d="M760 480 C580 515 420 520 245 520"/>
       </svg>
       <div class="career-milestones">
-        <article class="career-milestone">
+        <article class="career-milestone milestone-one">
           <span class="career-node" aria-hidden="true"></span>
           <span class="career-year">2009</span>
           <h3>Where it started</h3>
           <p class="career-company">Animaks</p>
           <p>Started out as a Graphic Designer, building the visual craft that still informs my product work.</p>
         </article>
-        <article class="career-milestone">
+        <article class="career-milestone milestone-two">
           <span class="career-node" aria-hidden="true"></span>
           <span class="career-year">2014–15</span>
           <h3>Creative direction</h3>
           <p class="career-company">Penatraite · Skadas Creative</p>
           <p>Expanded from visual execution into creative leadership and shaping cohesive experiences.</p>
         </article>
-        <article class="career-milestone">
+        <article class="career-milestone milestone-three">
           <span class="career-node" aria-hidden="true"></span>
           <span class="career-year">2016–18</span>
           <h3>Into UX and UI</h3>
           <p class="career-company">Techvisions · Wishpoint · LTI</p>
           <p>Moved into UX/UI design, product experiences and leading interface design work.</p>
         </article>
-        <article class="career-milestone">
+        <article class="career-milestone milestone-four">
           <span class="career-node" aria-hidden="true"></span>
           <span class="career-year">2019–22</span>
           <h3>Building product design</h3>
           <p class="career-company">Nehat Tech Solutions (EnKash)</p>
           <p>As a founding designer, helped shift teams toward a user-centred lifecycle and built a multi-product design system.</p>
         </article>
-        <article class="career-milestone">
+        <article class="career-milestone milestone-five">
           <span class="career-node" aria-hidden="true"></span>
           <span class="career-year">2022–26</span>
           <h3>Enterprise SaaS and DevOps</h3>
