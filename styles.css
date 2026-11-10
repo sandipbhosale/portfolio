@@ -279,3 +279,11 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 .case-meta{font:600 .95rem var(--display);color:var(--muted)}.case-intro{font-size:1.15rem;max-width:72ch;margin:20px 0 34px}
 .case-back{margin-top:48px;padding-top:24px;border-top:1px solid var(--line)}.case-page .case{margin-top:24px}
 @media(max-width:720px){.project-grid{grid-template-columns:1fr}.project-thumb{min-height:220px}.project-card-copy{align-items:flex-start}}
+
+/* IP discovery case-study intro: summary left, matching home-card thumbnail right */
+.case-intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:clamp(24px,4vw,48px);align-items:center;margin:10px 0 28px}
+.case-intro-grid .lede{margin:0;max-width:62ch}
+.case-hero-thumb{width:100%;min-height:230px;aspect-ratio:16/10;pointer-events:none}
+.case-hero-thumb .thumb-window{width:82%;height:70%}
+.case-hero-thumb .thumb-index{display:none}
+@media(max-width:760px){.case-intro-grid{grid-template-columns:1fr}.case-hero-thumb{min-height:190px;max-width:560px}}
