@@ -80,7 +80,7 @@
   var activePrimary = null;
   function state(t) {
     var hit = t && t.closest ? t.closest("a, button, summary") : null;
-    var primary = t && t.closest ? t.closest(".btn.primary, .contact") : null;
+    var primary = t && t.closest ? t.closest(".btn.primary") : null;
     ring.classList.toggle("link", !!hit);
     if (activePrimary && activePrimary !== primary) activePrimary.classList.remove("cursor-primary-hover");
     if (primary) primary.classList.add("cursor-primary-hover");
