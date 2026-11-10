@@ -13,12 +13,18 @@
   --ink: #101828;
   --muted: #4A5568;
   --line: #D3DAE8;
-  --blue: #007586;
-  --primary: #00AFAF;
-  --blue-soft: #D9F1F4;
-  --accent-text: #007586;
+  --blue: #1A73E8;
+  --primary: #1A73E8;
+  --blue-soft: #E8F0FE;
+  --accent-text: #1A73E8;
+  --green: #188038;
+  --green-soft: #E6F4EA;
+  --yellow: #F9AB00;
+  --yellow-soft: #FEF7E0;
+  --red: #D93025;
+  --red-soft: #FCE8E6;
   --panel: #E4E8F0;
-  --on-blue: #06242C;
+  --on-blue: #FFFFFF;
   --ok-bg: #DCF3E7; --ok-fg: #0B6B45;
   --warn-bg: #FFEFC9; --warn-fg: #7A5200;
   --off-bg: #E5E8EF; --off-fg: #475066;
@@ -32,16 +38,16 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0D1322; --surface: #151D33; --ink: #E9EDF7; --muted: #A5AFC5; --line: #2A3453;
-    --blue: #0DF6E3; --primary: #0DF6E3; --blue-soft: #16343D; --accent-text: #0DF6E3; --on-blue: #06242C; --panel: #1C2542;
-    --ok-bg: #12382B; --ok-fg: #7FE0B3;
-    --warn-bg: #3F3213; --warn-fg: #F5CB6A;
+    --blue: #8AB4F8; --primary: #1A73E8; --blue-soft: #1B3154; --accent-text: #8AB4F8; --green: #81C995; --green-soft: #183A2A; --yellow: #FDD663; --yellow-soft: #3D3218; --red: #F28B82; --red-soft: #402522; --on-blue: #FFFFFF; --panel: #1C2542;
+    --ok-bg: #183A2A; --ok-fg: #81C995;
+    --warn-bg: #3D3218; --warn-fg: #FDD663;
     --off-bg: #262F47; --off-fg: #B3BDD3;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0D1322; --surface: #151D33; --ink: #E9EDF7; --muted: #A5AFC5; --line: #2A3453;
-  --blue: #0DF6E3; --primary: #0DF6E3; --blue-soft: #16343D; --accent-text: #0DF6E3; --on-blue: #06242C; --panel: #1C2542;
+  --blue: #8AB4F8; --primary: #1A73E8; --blue-soft: #1B3154; --accent-text: #8AB4F8; --green: #81C995; --green-soft: #183A2A; --yellow: #FDD663; --yellow-soft: #3D3218; --red: #F28B82; --red-soft: #402522; --on-blue: #FFFFFF; --panel: #1C2542;
   --ok-bg: #12382B; --ok-fg: #7FE0B3;
   --warn-bg: #3F3213; --warn-fg: #F5CB6A;
   --off-bg: #262F47; --off-fg: #B3BDD3;
@@ -251,26 +257,29 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 
 /* Dedicated project cards and case-study pages */
 .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,32px);margin-top:36px}
-.project-card{display:block;min-width:0;color:var(--ink);text-decoration:none}
+.project-card{display:block;min-width:0;color:var(--ink);text-decoration:none;--card-accent:var(--blue);--card-accent-soft:var(--blue-soft)}
+.project-card:nth-child(4n + 2){--card-accent:var(--green);--card-accent-soft:var(--green-soft)}
+.project-card:nth-child(4n + 3){--card-accent:var(--yellow);--card-accent-soft:var(--yellow-soft)}
+.project-card:nth-child(4n + 4){--card-accent:var(--red);--card-accent-soft:var(--red-soft)}
 .project-thumb{position:relative;min-height:260px;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface);display:grid;place-items:center;transition:transform .35s,border-color .25s}
 .project-card:hover .project-thumb{transform:translateY(-5px);border-color:var(--blue)}
 .thumb-index{position:absolute;left:20px;bottom:16px;font:600 .72rem var(--display);letter-spacing:.12em;color:var(--muted)}
 .thumb-window{width:76%;height:67%;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 18px 55px rgba(20,30,60,.14);transform:rotate(-3deg)}
 .thumb-toolbar{height:28px;display:flex;align-items:center;gap:5px;padding:0 9px;border-bottom:1px solid var(--line);font:700 .55rem var(--display);color:var(--muted)}
-.thumb-toolbar i{width:6px;height:6px;border-radius:50%;background:var(--blue);opacity:.7}
+.thumb-toolbar i{width:6px;height:6px;border-radius:50%;background:var(--card-accent);opacity:.9}
 .thumb-toolbar span{margin-left:8px;letter-spacing:.12em}
 .thumb-layout{display:grid;grid-template-columns:30% 1fr;height:calc(100% - 28px)}
 .thumb-filters{padding:12px 9px;display:grid;align-content:start;gap:7px;border-right:1px solid var(--line);font:.5rem var(--display);color:var(--muted)}
 .thumb-filters b,.thumb-results b{color:var(--ink);font-size:.58rem}
-.thumb-filters em{height:7px;border-radius:3px;background:var(--blue-soft);width:80%}
+.thumb-filters em{height:7px;border-radius:3px;background:var(--card-accent-soft);width:80%}
 .thumb-results{padding:14px;display:grid;align-content:start;gap:10px}
 .thumb-results i{height:13px;border-bottom:1px solid var(--line);position:relative}
 .thumb-results i:after{content:"";position:absolute;left:0;top:2px;width:42%;height:5px;border-radius:4px;background:var(--panel)}
-.thumb-system{background:radial-gradient(circle at 50% 45%,var(--blue-soft),var(--bg) 62%)}
-.system-orbit{position:absolute;width:48%;aspect-ratio:1;border:1px solid var(--blue);opacity:.4;border-radius:50%}
+.thumb-system{background:radial-gradient(circle at 50% 45%,var(--card-accent-soft),var(--bg) 62%)}
+.system-orbit{position:absolute;width:48%;aspect-ratio:1;border:1px solid var(--card-accent);opacity:.5;border-radius:50%}
 .orbit-two{width:68%;transform:rotateX(62deg) rotate(-25deg)}.orbit-one{transform:rotateX(62deg) rotate(35deg)}
-.system-core{width:76px;height:76px;border-radius:22px;background:var(--blue);color:var(--on-blue);display:grid;place-items:center;font:800 1.6rem var(--display)}
-.system-node{position:absolute;width:38px;height:38px;border-radius:12px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font:700 .7rem var(--display);color:var(--accent-text)}
+.system-core{width:76px;height:76px;border-radius:22px;background:var(--card-accent);color:var(--on-blue);display:grid;place-items:center;font:800 1.6rem var(--display)}
+.system-node{position:absolute;width:38px;height:38px;border-radius:12px;background:var(--surface);border:1px solid var(--card-accent);display:grid;place-items:center;font:700 .7rem var(--display);color:var(--card-accent)}
 .node-one{top:22%;left:25%}.node-two{top:30%;right:22%}.node-three{bottom:23%;left:48%}
 .project-card-copy{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px 4px}
 .project-card-copy h3{font-size:clamp(1.15rem,2.1vw,1.55rem);line-height:1.2;margin-bottom:6px}
