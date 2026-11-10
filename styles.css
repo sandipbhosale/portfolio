@@ -397,5 +397,9 @@ html.cursor-on, html.cursor-on * { cursor: none !important; }
 .sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 @media (prefers-reduced-motion:reduce) { .jt-item { transition:none; } .jt-item::after { transition:none; } }
 
-/* Keep the cursor visibly white over primary-colour surfaces instead of inverting to orange. */
-.cur-ring.primary-hover { mix-blend-mode: normal; }
+
+/* Primary surfaces switch to a high-contrast inverted state under the cursor. */
+.btn.primary.cursor-primary-hover,
+.contact.cursor-primary-hover { background: #000000; border-color: #000000; color: #FFFFFF; }
+.btn.primary.cursor-primary-hover *,
+.contact.cursor-primary-hover * { color: #FFFFFF; }
