@@ -464,3 +464,57 @@ h1 .hero-dot { color: inherit; }
 @media (prefers-reduced-motion:reduce) {
   .career-milestone,.career-node,.project-card,.project-thumb { transition:none!important; transform:none!important; }
 }
+
+/* Snake-style horizontal career journey, based on the supplied visual reference. */
+.career-roadmap--snake { position:relative; height:540px; min-height:0; margin:48px 0 0; }
+.career-roadmap--snake .career-route { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
+.career-roadmap--snake .career-route path { fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.career-roadmap--snake .route-base { stroke:var(--muted); stroke-width:2; opacity:.78; }
+.career-roadmap--snake .route-accent { stroke:var(--blue); stroke-width:2.5; }
+.career-roadmap--snake .career-milestones { position:absolute; inset:0; display:block; }
+.career-roadmap--snake .career-milestone { position:absolute; width:min(235px,22%); min-width:0; padding:0; opacity:0; transform:translateY(12px); transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1); }
+.career-roadmap--snake .career-milestone.is-visible { opacity:1; transform:translateY(0); }
+.career-roadmap--snake .career-milestone:nth-child(1) { left:3.5%; top:0; }
+.career-roadmap--snake .career-milestone:nth-child(2) { left:24%; top:190px; }
+.career-roadmap--snake .career-milestone:nth-child(3) { left:49%; top:12px; }
+.career-roadmap--snake .career-milestone:nth-child(4) { left:72%; top:230px; text-align:right; }
+.career-roadmap--snake .career-milestone:nth-child(5) { left:44%; top:400px; text-align:center; }
+.career-roadmap--snake .career-node { position:absolute; width:13px; height:13px; border:2px solid var(--muted); border-radius:50%; background:var(--bg); box-shadow:0 0 0 5px color-mix(in srgb,var(--bg) 80%,transparent),0 0 12px color-mix(in srgb,var(--muted) 45%,transparent); transition:transform .2s,border-color .2s; }
+.career-roadmap--snake .career-milestone:nth-child(1) .career-node { left:0; top:96px; }
+.career-roadmap--snake .career-milestone:nth-child(2) .career-node { left:45%; top:-72px; }
+.career-roadmap--snake .career-milestone:nth-child(3) .career-node { left:48%; top:122px; }
+.career-roadmap--snake .career-milestone:nth-child(4) .career-node { right:18%; top:65px; }
+.career-roadmap--snake .career-milestone:nth-child(5) .career-node { left:48%; top:76px; border-color:var(--blue); background:var(--blue); box-shadow:0 0 0 6px color-mix(in srgb,var(--blue) 16%,transparent),0 0 14px color-mix(in srgb,var(--blue) 35%,transparent); }
+.career-roadmap--snake .career-milestone:hover .career-node { transform:scale(1.25); border-color:var(--blue); }
+.career-roadmap--snake .career-year { margin-bottom:8px; }
+.career-roadmap--snake .career-milestone h3 { margin:0 0 6px; font-size:clamp(1.05rem,1.4vw,1.28rem); }
+.career-roadmap--snake .career-company { font-size:.9rem; }
+.career-roadmap--snake .career-milestone p:last-child { font-size:.9rem; line-height:1.5; }
+@media (max-width:900px) and (min-width:681px) {
+  .career-roadmap--snake { height:590px; }
+  .career-roadmap--snake .career-milestone { width:25%; }
+  .career-roadmap--snake .career-milestone:nth-child(1) { left:2%; }
+  .career-roadmap--snake .career-milestone:nth-child(2) { left:20%; top:210px; }
+  .career-roadmap--snake .career-milestone:nth-child(3) { left:45%; top:8px; }
+  .career-roadmap--snake .career-milestone:nth-child(4) { left:72%; top:260px; }
+  .career-roadmap--snake .career-milestone:nth-child(5) { left:40%; top:440px; }
+}
+@media (max-width:680px) {
+  .career-roadmap--snake { height:auto; min-height:0; margin:34px 0 0; padding-left:30px; }
+  .career-roadmap--snake .career-route { position:absolute; left:0; top:0; width:26px; height:100%; }
+  .career-roadmap--snake .career-route path { display:none; }
+  .career-roadmap--snake .career-milestones { position:relative; display:grid; grid-template-columns:1fr; gap:0; }
+  .career-roadmap--snake .career-milestone,
+  .career-roadmap--snake .career-milestone:nth-child(1),
+  .career-roadmap--snake .career-milestone:nth-child(2),
+  .career-roadmap--snake .career-milestone:nth-child(3),
+  .career-roadmap--snake .career-milestone:nth-child(4),
+  .career-roadmap--snake .career-milestone:nth-child(5) { position:relative; left:auto; top:auto; width:100%; min-height:0; padding:0 0 30px 18px; text-align:left; }
+  .career-roadmap--snake .career-node,
+  .career-roadmap--snake .career-milestone:nth-child(n) .career-node { left:-30px; right:auto; top:3px; }
+  .career-roadmap--snake .career-milestone:not(:last-child)::before { content:""; position:absolute; left:-23px; top:18px; bottom:0; width:1px; background:var(--line); }
+  .career-roadmap--snake .career-milestone:nth-child(5) { padding-bottom:0; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .career-roadmap--snake .career-milestone { transition:none!important; transform:none!important; }
+}
