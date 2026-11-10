@@ -73,8 +73,8 @@ section { padding-block: clamp(56px, 9vw, 104px); }
 /* header */
 .top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 28px; padding-block: 14px; }
 .brand { font-family: var(--display); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
-.nav { display: flex; flex-wrap: wrap; gap: 6px 24px; }
-.nav a { font-family: var(--display); font-weight: 500; font-size: 0.98rem; color: var(--ink); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; }
+.nav { display: flex; flex-wrap: wrap; gap: 6px 24px; align-self: stretch; }
+.nav a { display: flex; align-items: center; font-family: var(--display); font-weight: 500; font-size: 0.98rem; color: var(--ink); text-decoration: none; padding: 0; margin-block: -14px; border-bottom: 2px solid transparent; }
 .nav a:hover { border-bottom-color: var(--blue); }
 
 /* sticky header */
