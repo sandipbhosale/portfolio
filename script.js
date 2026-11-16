@@ -332,3 +332,35 @@
   }, { threshold: 0.15 });
   milestones.forEach(function (item) { observer.observe(item); });
 })();
+
+
+/* ===== 8. REFINED SCROLL REVEALS ===== */
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var targets = document.querySelectorAll(
+    ".hero .lede, .hero .cta, .hero .portrait, #shift .vhead, " +
+    "#work .project-card, #experience .job, #contact .contact-card"
+  );
+  if (!targets.length) return;
+
+  targets.forEach(function (item, index) {
+    item.classList.add("motion-reveal");
+    item.style.setProperty("--reveal-delay", (index % 3) * 90 + "ms");
+  });
+
+  if (reduce || !("IntersectionObserver" in window)) {
+    targets.forEach(function (item) { item.classList.add("is-visible"); });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -36px 0px" });
+
+  targets.forEach(function (item) { observer.observe(item); });
+})();
