@@ -990,3 +990,35 @@ h1 .hero-dot { color: inherit; }
     z-index: 3001 !important;
   }
 }
+
+
+/* Refined mobile menu icon: three distinct bars that cleanly morph into a close mark. */
+@media (max-width: 760px) {
+  .site-head .menu-btn,
+  body.mobile-menu-scrolled .site-head .menu-btn {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+  }
+  .site-head .menu-btn span {
+    display: block !important;
+    width: 21px !important;
+    height: 2px !important;
+    flex: 0 0 2px !important;
+    border-radius: 2px !important;
+    transform-origin: center !important;
+    transition: transform .22s ease, opacity .16s ease !important;
+  }
+  .site-head .menu-btn[aria-expanded="true"] span:first-child {
+    transform: translateY(7px) rotate(45deg) !important;
+  }
+  .site-head .menu-btn[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0 !important;
+    transform: scaleX(.2) !important;
+  }
+  .site-head .menu-btn[aria-expanded="true"] span:last-child {
+    transform: translateY(-7px) rotate(-45deg) !important;
+  }
+}
