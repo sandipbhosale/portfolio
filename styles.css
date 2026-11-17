@@ -686,3 +686,11 @@ h1 .hero-dot { color: inherit; }
  .case-hero-thumb.ai-portfolio-thumb img { min-height:0; }
  .ai-step-illustration { border-radius:10px; }
 }
+
+
+/* Keep the AI portfolio case study in a readable single-column flow. */
+.ai-portfolio-case .case-cols {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 820px;
+  margin-inline: auto;
+}
