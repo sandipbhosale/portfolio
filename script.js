@@ -364,3 +364,25 @@
 
   targets.forEach(function (item) { observer.observe(item); });
 })();
+
+
+/* ===== 8. MOBILE HEADER SCROLL STATE ===== */
+(function () {
+  var body = document.body;
+  if (!body || !document.querySelector(".site-head") || !document.getElementById("menuBtn")) return;
+  var threshold = 72;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    body.classList.toggle("mobile-menu-scrolled", window.innerWidth <= 760 && window.scrollY > threshold);
+  }
+  function requestUpdate() {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+  }
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  update();
+})();
