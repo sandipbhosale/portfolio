@@ -705,10 +705,12 @@ h1 .hero-dot { color: inherit; }
 .ai-portfolio-case .ai-z-sections {
   display: flex;
   flex-direction: column;
-  gap: clamp(44px, 7vw, 88px);
-  margin-top: clamp(36px, 5vw, 64px);
+  gap: clamp(28px, 3.5vw, 44px);
+  margin-top: clamp(28px, 3.5vw, 44px);
 }
 .ai-portfolio-case .ai-z-section {
+  padding-block: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
@@ -740,14 +742,15 @@ h1 .hero-dot { color: inherit; }
 .ai-portfolio-case .ai-z-copy ol { padding-left: 1.25rem; color: var(--muted); }
 .ai-portfolio-case .ai-z-copy li { margin: 0 0 10px; }
 .ai-portfolio-case .ai-z-outcome {
-  max-width: 900px;
-  margin: clamp(44px, 7vw, 88px) auto 0;
-  padding-top: 28px;
+  width: 100%;
+  max-width: none;
+  margin: clamp(28px, 3.5vw, 44px) 0 0;
+  padding: 28px 0 0;
   border-top: 1px solid var(--line);
 }
 @media (max-width: 760px) {
   .ai-portfolio-case .ai-z-section { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .ai-portfolio-case .ai-z-section:nth-child(even) .ai-z-image,
   .ai-portfolio-case .ai-z-section:nth-child(even) .ai-z-copy { order: initial; }
-  .ai-portfolio-case .ai-z-sections { gap: 48px; }
+  .ai-portfolio-case .ai-z-sections { gap: 36px; }
 }
