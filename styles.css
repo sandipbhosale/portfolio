@@ -782,3 +782,51 @@ h1 .hero-dot { color: inherit; }
     order: -1;
   }
 }
+
+
+/* Mobile: keep only a floating circular menu control in the top-right corner. */
+@media (max-width: 760px) {
+  .site-head {
+    position: static;
+    background: transparent;
+    border: 0;
+    pointer-events: none;
+  }
+  .top {
+    justify-content: flex-end;
+    min-height: 0;
+    padding: 0;
+  }
+  .brand,
+  .theme-btn {
+    display: none !important;
+  }
+  .hdr-r {
+    position: static;
+    width: auto;
+    margin: 0;
+    pointer-events: none;
+  }
+  .menu-btn {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 16px);
+    right: 16px;
+    z-index: 1000;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 6px 22px rgba(20, 35, 60, .14);
+    pointer-events: auto;
+  }
+  .hdr-r .nav {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 78px);
+    right: 16px;
+    z-index: 1001;
+    pointer-events: auto;
+  }
+}
