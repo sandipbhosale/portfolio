@@ -754,3 +754,18 @@ h1 .hero-dot { color: inherit; }
   .ai-portfolio-case .ai-z-section:nth-child(even) .ai-z-copy { order: initial; }
   .ai-portfolio-case .ai-z-sections { gap: 36px; }
 }
+
+
+/* AI portfolio case study: emphasize the section label, keep its descriptor regular. */
+.ai-portfolio-case .ai-z-copy h4,
+.ai-portfolio-case .ai-z-outcome h4 {
+  font-weight: 400;
+}
+.ai-portfolio-case .ai-z-copy h4 strong,
+.ai-portfolio-case .ai-z-outcome h4 strong {
+  font-weight: 800;
+}
+.ai-portfolio-case .ai-z-copy h4 span,
+.ai-portfolio-case .ai-z-outcome h4 span {
+  font-weight: 400;
+}
