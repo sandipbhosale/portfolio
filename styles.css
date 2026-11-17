@@ -699,3 +699,55 @@ h1 .hero-dot { color: inherit; }
 .ai-portfolio-case .case-cols ol {
   max-width: 100%;
 }
+
+
+/* Alternating image-and-copy Z pattern for the AI portfolio case study. */
+.ai-portfolio-case .ai-z-sections {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(44px, 7vw, 88px);
+  margin-top: clamp(36px, 5vw, 64px);
+}
+.ai-portfolio-case .ai-z-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+}
+.ai-portfolio-case .ai-z-section:nth-child(even) .ai-z-image { order: 2; }
+.ai-portfolio-case .ai-z-section:nth-child(even) .ai-z-copy { order: 1; }
+.ai-portfolio-case .ai-z-image { min-width: 0; }
+.ai-portfolio-case .ai-z-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+}
+.ai-portfolio-case .ai-z-copy h4,
+.ai-portfolio-case .ai-z-outcome h4 {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+.ai-portfolio-case .ai-z-copy p,
+.ai-portfolio-case .ai-z-outcome p {
+  max-width: 65ch;
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+.ai-portfolio-case .ai-z-copy ol { padding-left: 1.25rem; color: var(--muted); }
+.ai-portfolio-case .ai-z-copy li { margin: 0 0 10px; }
+.ai-portfolio-case .ai-z-outcome {
+  max-width: 900px;
+  margin: clamp(44px, 7vw, 88px) auto 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .ai-portfolio-case .ai-z-section { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .ai-portfolio-case .ai-z-section:nth-child(even) .ai-z-image,
+  .ai-portfolio-case .ai-z-section:nth-child(even) .ai-z-copy { order: initial; }
+  .ai-portfolio-case .ai-z-sections { gap: 48px; }
+}
