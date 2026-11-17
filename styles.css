@@ -733,9 +733,14 @@ h1 .hero-dot { color: inherit; }
   line-height: 1.2;
   margin: 0 0 14px;
 }
-.ai-portfolio-case .ai-z-copy p,
-.ai-portfolio-case .ai-z-outcome p {
+.ai-portfolio-case .ai-z-copy p {
   max-width: 65ch;
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+.ai-portfolio-case .ai-z-outcome p {
+  max-width: none;
+  width: 100%;
   margin: 0 0 14px;
   color: var(--muted);
 }
