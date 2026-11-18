@@ -1,0 +1,7 @@
+/* Keep Storybook's canvas close to the portfolio's visual environment. */
+.sb-show-main { background: #f7f7f4; }
+#storybook-root { min-height: 100%; }
+.storybook-stage { max-width: 1080px; margin: 0 auto; padding: 24px; }
+.storybook-stage--nav { background: var(--surface, #fff); border: 1px solid var(--line, #e5e7eb); border-radius: 14px; }
+.storybook-stage--card { max-width: 620px; }
+.storybook-stage--buttons { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
